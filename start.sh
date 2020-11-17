@@ -26,4 +26,4 @@ ln -s /app/configfiles /home/steamuser/Zomboid
 # Launch Server
 # Variables pulled from Docker environment
 cd /app
-./start-server.sh
+./start-server.sh -servername ${SERVERNAME} -adminpassword ${PASSWORD}

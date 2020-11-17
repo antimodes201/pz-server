@@ -21,25 +21,25 @@ change the volume options to a directory on your node and maybe use a admin and 
  
 ```
 docker run -it -p 16261:16261/udp -p 16262:16272/tcp -v /app/docker/temp-vol:/app \
+-e SERVERNAME="default" \
+-e PASSWORD="password123" \
 --name pz-server \
 antimodes201/pz-server:latest
 ```
- 
-On first boot of a new image the system will ask for a database password if no database is found from an imported save.
- 
-User 'admin' not found, creating it
-Command line admin password: null
-Enter new administrator password:
-password123
-Confirm the password:
-password123
-Administrator account 'admin' created.
  
 To allow more then 10 players extend the port range by the number of players (16262 + # of players).  EG for 20 players:
 ```
 docker run -it -p 16261:16261/udp -p 16262:16282/tcp -v /app/docker/temp-vol:/app \
+-e SERVERNAME="default" \
+-e PASSWORD="password123" \
 --name pz-server \
 antimodes201/pz-server:latest
 ```
  
+To change the save name from the default servertest use the 
 World save and config files are commited to a directory called configfiles at the root of your mounted volume.
+ 
+Currently exposed environmental variables and their default values
+- SERVERNAME default
+- PASSWORD "CHANGEME"
+- TZ America/New_York
