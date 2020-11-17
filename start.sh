@@ -17,7 +17,7 @@ fi
 /app/steamcmd/steamcmd.sh +login anonymous +force_install_dir /app +app_update 380870 +quit
 
 # symlink to app
-if [ ! -f configfiles ]
+if [ ! -d /app/configfiles ]
 then
 	mkdir /app/configfiles
 fi
