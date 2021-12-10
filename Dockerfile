@@ -19,6 +19,7 @@ ENV PASSWORD "CHANGEME"
 ENV SERVERNAME "default"
 ENV ADDITIONAL_OPTS ""
 ENV TZ "America/New_York"
+ENV BRANCH $BRANCH
 
 # dependencies
 RUN dpkg --add-architecture i386 && \
