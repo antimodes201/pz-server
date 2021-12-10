@@ -1,4 +1,4 @@
-FROM ubuntu:18.04
+FROM ubuntu:20.04
 MAINTAINER antimodes201
 
 # quash warnings
@@ -25,7 +25,7 @@ ENV BRANCH $BRANCH
 RUN dpkg --add-architecture i386 && \
         apt-get update && \
         apt-get install -y --no-install-recommends \
-		libcurl3  \
+		libcurl4  \
 		lib32gcc1 \
 		wget \
 		unzip \
