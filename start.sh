@@ -14,7 +14,14 @@ then
 fi
 
 # check for updates
-/app/steamcmd/steamcmd.sh +login anonymous +force_install_dir /app +app_update 380870 +quit
+build=${BRANCH}
+if [ ${BRANCH} == "public" ]
+then
+	# GA
+	/app/steamcmd/steamcmd.sh +login anonymous +force_install_dir /app +app_update 380870 +quit
+else
+	# Expermental 
+	/app/steamcmd/steamcmd.sh +login anonymous +force_install_dir /app +app_update 380870 -beta ${BRANCH} +quit
 
 # symlink to app
 if [ ! -d /app/configfiles ]
