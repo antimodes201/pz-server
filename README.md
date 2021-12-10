@@ -43,3 +43,4 @@ Currently exposed environmental variables and their default values
 - SERVERNAME default
 - PASSWORD "CHANGEME"
 - TZ America/New_York
+- Branch "public"
